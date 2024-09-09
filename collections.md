@@ -1,5 +1,5 @@
 ---
-git: 0d2416ba760b34f142688b853c9b6b7817de12da
+git: 62eb15f6637ea5810edf8a9aeae0e621003cff0f
 ---
 
 # Коллекции
@@ -1458,7 +1458,7 @@ git: 0d2416ba760b34f142688b853c9b6b7817de12da
          * Создать новый экземпляр валюты.
          */
         function __construct(
-            public string $code
+            public string $code,
         ) {}
     }
 
@@ -1813,7 +1813,7 @@ $percentage = $collection->percentage(fn ($value) => $value === 1, precision: 3)
          * Создать новый экземпляр ResourceCollection.
          */
         public function __construct(
-          public Collection $collection,
+            public Collection $collection,
         ) {}
     }
 
