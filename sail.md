@@ -153,7 +153,7 @@ sail php script.php
 
 Команды Composer могут быть выполнены с помощью команды `composer`. Контейнер приложения Laravel Sail содержит Composer:
 
-```nothing
+```shell
 sail composer require laravel/sanctum
 ```
 
@@ -461,9 +461,9 @@ SAIL_XDEBUG_MODE=develop,debug,coverage
 
 #### Настройка IP хоста для Linux
 
-Внутренняя переменная окружения `XDEBUG_CONFIG` определяется как `client_host=host.docker.internal`, чтобы Xdebug был правильно настроен для Mac и Windows (WSL2). Хост host.docker.internal существует только в системах под управлением Docker Desktop, т.е. Mac и Windows. Если на вашем локальном компьютере работает Linux и вы используете Docker 20.10+, доступен `host.docker.internal`, и ручная настройка не требуется.
+Внутренняя переменная окружения `XDEBUG_CONFIG` определяется как `client_host=host.docker.internal`, чтобы Xdebug был правильно настроен для Mac и Windows (WSL2). Если на вашем локальном компьютере работает Linux и вы используете Docker 20.10+, доступен `host.docker.internal`, и ручная настройка не требуется.
 
-Для версий Docker старше 20.10 не поддерживается `host.docker.internal` в Linux, и вам придется вручную определить IP-адрес хоста. Для этого настройте статический IP-адрес для вашего контейнера, определив собственную сеть в файле docker-compose.yml:
+Для версий Docker старше 20.10 не поддерживается `host.docker.internal` в Linux, и вам придется вручную определить IP-адрес хоста. Для этого настройте статический IP-адрес для вашего контейнера, определив собственную сеть в файле `docker-compose.yml`:
 
 ```yaml
 networks:
